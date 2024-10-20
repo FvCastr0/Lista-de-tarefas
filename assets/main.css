@@ -1,0 +1,144 @@
+* {
+    background-color: #272727;
+    color: white;
+}
+
+@keyframes checkedAnimation {
+    from {
+        width: 0%;
+    }
+}
+
+
+@keyframes cardLoader {
+    from {
+        transform: translateY(-2rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -23rem);
+    margin-top: 1.6rem;
+    width: 700px;
+}
+
+main article h1 {
+    font-family: 'Afacad Flux';
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+main article h1::after {
+    content: " ";
+    width: 150px;
+    height: 2px;
+    border-radius: 2rem;
+    background-color: #cf6807;
+    position: absolute;
+    left: .6rem;
+    transform: translateY(2rem);
+}
+
+#data {
+    display: flex;
+    align-items: center;
+}
+
+#data h2 {
+    font-size: 3.4rem;
+    font-family: 'Inter';
+}
+
+#data p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Afacad Flux';
+}
+
+#data legend {
+    font-family: 'Roboto Mono';
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+form input {
+    padding: .8rem .6rem;
+    width: 100%;
+    border: 1px solid #FFF;
+    font-size: 1.4rem;
+    border-radius: .4rem;
+    outline: none;
+}
+
+form button {
+    position: absolute;
+    right: -1.2rem;
+    transform: translateY(-3rem);
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    opacity: 0.8;
+}
+
+.card {
+    margin: 1rem 0;
+    background-color: #302e2e;
+    display: flex;
+    justify-content: space-between;
+    border-radius: .5rem;
+    transition: all .3s ease-in-out;
+    animation: cardLoader .4s;
+}
+
+.card p {
+    background-color: transparent;
+    padding: 1rem;
+    text-wrap: wrap;
+    font-family: 'Inter';
+}
+
+.card div {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card button {
+    border: none;
+    cursor: pointer;
+}
+
+.card button,
+.card button img {
+    background-color: transparent;
+}
+
+.checked {
+    background-color: #214d21;
+    transition: all .3s ease-in-out;
+}
+
+.checked::before {
+    content: " ";
+    width: 100%;
+    height: 1.4px;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translateY(1.6rem);
+    animation: checkedAnimation .3s ease-in-out;
+}
